@@ -156,7 +156,6 @@ class NeutronManage(object):
         for network in netlist:
             try:
                 ret = self.neutronclient.delete_network(network['id'])
-                print "ret: ", ret
             except NeutronException as exp:
                 print "[NW DEL NeutronException]: ", exp
 
